@@ -19,7 +19,7 @@ function Hero() {
             {/* Center-right Side */}
             <div className="absolute right-28 top-1/2 mt-16 transform -translate-y-1/2 w-[550px] h-[400px] bg-white shadow-lg flex flex-col justify-between items-start p-6">
                 {/* Square Box containing a paragraph and then a button */}
-                <p className="text-3xl ml-4 mt-4 font-clash font-normal text-black">
+                <p className="text-3xl ml-4 mt-4 text-black">
                     Luxury Homeware for people <br /> who love timeless design quality
                 </p>
                 <p className="text-sm -mt-8 ml-4 font-clash text-gray-400">
