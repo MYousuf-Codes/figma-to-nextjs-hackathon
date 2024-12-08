@@ -1,3 +1,12 @@
+HOME PAGE:
+[(https://figma-to-nextjs-hackathon.vercel.app)]
+
+PRODUCTS LISTING PAGE:
+[(https://figma-to-nextjs-hackathon.vercel.app/products)]
+
+PRODUCTS DETAILS PAGE:(pending)
+[(https://figma-to-nextjs-hackathon.vercel.app/products-details)]
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
