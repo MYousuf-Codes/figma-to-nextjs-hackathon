@@ -22,7 +22,6 @@ function Branding() {
           </p>
         </div>
 
-        {/* Made by true artisans */}
         <div className="flex flex-col items-start bg-gray-100 p-4 sm:p-6 rounded-lg text-black shadow-sm">
           <FaCheckCircle className="text-3xl sm:text-4xl mb-3" />
           <h2 className="text-lg sm:text-xl font-semibold mb-2">
@@ -33,7 +32,6 @@ function Branding() {
           </p>
         </div>
 
-        {/* Unbeatable prices */}
         <div className="flex flex-col items-start bg-gray-100 p-4 sm:p-6 rounded-lg text-black shadow-sm">
           <FaCreditCard className="text-3xl sm:text-4xl mb-3" />
           <h2 className="text-lg sm:text-xl font-semibold mb-2">
@@ -45,7 +43,6 @@ function Branding() {
           </p>
         </div>
 
-        {/* Recycled packaging */}
         <div className="flex flex-col items-start bg-gray-100 p-4 sm:p-6 rounded-lg text-black shadow-sm">
           <FaRecycle className="text-3xl sm:text-4xl mb-3" />
           <h2 className="text-lg sm:text-xl font-semibold mb-2">
