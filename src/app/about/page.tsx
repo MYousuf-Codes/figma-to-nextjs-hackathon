@@ -2,19 +2,22 @@ import Branding from "@/components/Branding";
 import NewsLettter from "@/components/NewsLetter";
 import Story from "@/components/Story";
 import Image from "next/image";
+import Link from "next/link";
 
 function About() {
   return (
     <main className="container mx-auto px-4 md:px-8 lg:px-16 py-12">
       {/* Section 1: Heading and Button */}
       <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-        <h1 className="text-xl sm:text-2xl lg:text-2xl font-semibold mb-6 md:mb-0 md:ml-8">
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 md:mb-0 md:ml-8">
           A brand built on the love of craftmanship, <br />
           quality and outstanding customer service
         </h1>
-        <button className="bg-gray-100 text-sm sm:text-base lg:text-lg px-6 py-4 rounded shadow-md hover:bg-gray-200 transition">
+        <Link href={"/products"}>
+        <button className="bg-gray-100 text-sm sm:text-base lg:text-lg px-6 py-4  hover:bg-gray-200 transition">
           View Our Products
         </button>
+        </Link>
       </div>
 
       {/* Section 2: Story Component */}

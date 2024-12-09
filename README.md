@@ -15,6 +15,9 @@ CART PAGE:
 
 This is only a UI of E-commerce webiste, conerted from a Figma design as described for hackathon.
 
+Font Used:
+Clash Display
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

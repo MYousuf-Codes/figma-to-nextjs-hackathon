@@ -30,7 +30,7 @@ function Hero() {
                 </div>
 
                 {/* Image Section for Mobile */}
-                <div className="block md:hidden w-full h-[300px]">
+                <div className="block md:hidden w-full h-[350px]">
                     <Image
                         src={"/hero/Hero.png"} // Replace with your image path
                         alt="Hero Image"

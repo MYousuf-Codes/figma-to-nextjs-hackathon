@@ -8,7 +8,7 @@ type NewsletterProps = {
   textColor?: string; // Control text color
 };
 
-function NewsLettter({ useBackgroundImage = true, textColor = "text-white" }: NewsletterProps) {
+function Newsletter({ useBackgroundImage = true, textColor = "text-white" }: NewsletterProps) {
   const [email, setEmail] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
@@ -23,7 +23,7 @@ function NewsLettter({ useBackgroundImage = true, textColor = "text-white" }: Ne
   };
 
   return (
-    <main className="mt-16 relative">
+    <main className="mt-16 relative sm:text-left">
       <div
         className={`relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] ${
           !useBackgroundImage ? "bg-white" : ""
@@ -71,19 +71,19 @@ function NewsLettter({ useBackgroundImage = true, textColor = "text-white" }: Ne
           {/* Email Input and Submit Button */}
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row items-center justify-center w-full max-w-sm sm:max-w-lg"
+            className="flex items-center justify-center w-full max-w-sm sm:max-w-lg"
           >
             <input
               type="email"
               placeholder="you@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full sm:w-auto flex-1 px-6 py-4 text-black bg-white border border-gray-300 focus:outline-none"
+              className="flex-1 px-4 py-3 text-black bg-white border border-gray-300 focus:outline-none rounded-l-md"
               required
             />
             <button
               type="submit"
-              className="bg-blue-950 text-white px-6 py-4 sm:px-12  hover:bg-blue-800 transition duration-300"
+              className="bg-blue-950 text-white px-6 py-3 hover:bg-blue-800 transition duration-300 rounded-r-md"
             >
               Sign up
             </button>
@@ -101,4 +101,4 @@ function NewsLettter({ useBackgroundImage = true, textColor = "text-white" }: Ne
   );
 }
 
-export default NewsLettter;
+export default Newsletter;

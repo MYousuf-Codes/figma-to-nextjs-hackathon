@@ -1,6 +1,7 @@
 import Image from "next/image";
 import products from "../Data/products";
 import { IoMdArrowDropdown } from "react-icons/io";
+import Link from "next/link";
 
 
 const Products: React.FC = () => {
@@ -9,7 +10,7 @@ const Products: React.FC = () => {
             {/* Banner Section */}
             <div className="relative w-full">
                 <Image
-                    src="/productsBanner.png" // Replace with your banner image path
+                    src="/productsBanner.png" 
                     alt="All Products Banner"
                     layout="responsive"
                     width={1600} // 100% width for all screen sizes
@@ -93,13 +94,15 @@ const Products: React.FC = () => {
                                     key={product.id}
                                     className="p-4 transform transition"
                                 >
-                                    <Image
-                                        src={product.image}
-                                        alt={product.name}
-                                        width={400}
-                                        height={600}
-                                        className="w-[500px] h-[48] transition transform hover:scale-110 duration-300 object-cover mb-4"
-                                    />
+                                    <Link href={"/products-details"}>
+                                        <Image
+                                            src={product.image}
+                                            alt={product.name}
+                                            width={400}
+                                            height={600}
+                                            className="w-[500px] h-[48] transition transform hover:scale-110 duration-300 object-cover mb-4"
+                                        />
+                                    </Link>
                                     <h2 className="text-xl font-semibold text-gray-800">{product.name}</h2>
                                     <p className="text-lg text-gray-600 mt-2 mb-2">${product.price}</p>
                                 </div>
@@ -108,7 +111,7 @@ const Products: React.FC = () => {
 
                         {/* Load More / View Collection */}
                         <div className="flex justify-center mt-8">
-                            <button className="bg-gray-200 text-black hover:text-white px-6 py-3 hover:bg-gray-700 transition transform duration-300">
+                            <button className="bg-gray-200 text-black hover:text-white px-8 py-3 hover:bg-gray-700 transition transform duration-300">
                                 Load More
                             </button>
                         </div>

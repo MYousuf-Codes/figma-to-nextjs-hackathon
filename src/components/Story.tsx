@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Story() {
   return (
@@ -16,9 +17,11 @@ function Story() {
             </p>
           </div>
           {/* Button with fixed size and alignment */}
+          <Link href={"/products"}>
           <button className="px-4 py-2 sm:py-3 ml-4 sm:ml-6 bg-gray-600 text-white transition duration-300 w-max mx-auto mt-6 lg:mt-0 mb-4">
             View Collection
           </button>
+          </Link>
         </div>
 
         {/* Right Section: Image */}

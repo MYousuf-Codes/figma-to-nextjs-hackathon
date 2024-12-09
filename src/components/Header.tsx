@@ -32,20 +32,20 @@ const Header: React.FC = () => {
 
         {/* Cart and Profile Icons - Desktop */}
         <div className="hidden md:flex items-center space-x-4 order-3">
-        <Link href={"/cart"}><FiShoppingCart className="w-6 h-6 text-gray-600 cursor-pointer" /></Link>
+          <Link href={"/cart"}><FiShoppingCart className="w-6 h-6 text-gray-600 cursor-pointer" /></Link>
           <FiUser className="w-6 h-6 text-gray-600 cursor-pointer" />
         </div>
       </div>
 
       {/* Navigation Links - Desktop */}
       <ul className="hidden md:flex justify-center space-x-4 py-4 items-center gap-4">
-        <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Plant Pots</li>
-        <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Ceramics</li>
-        <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Tables</li>
-        <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Chairs</li>
-        <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Crockey</li>
-        <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Tableware</li>
-        <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Cutlery</li>
+        <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Plant Pots</Link></li>
+        <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Ceramics</Link></li>
+        <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Tables</Link></li>
+        <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Chairs</Link></li>
+        <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Crockey</Link></li>
+        <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Tableware</Link></li>
+        <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Cutlery</Link></li>
       </ul>
 
       {/* Mobile Hamburger Menu */}
@@ -64,13 +64,13 @@ const Header: React.FC = () => {
             <HiX className="w-6 h-6" />
           </button>
           <ul className="flex flex-col items-start px-4 py-8 space-y-4">
-            <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Plant Pots</li>
-            <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Ceramics</li>
-            <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Tables</li>
-            <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Chairs</li>
-            <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Crockey</li>
-            <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Tableware</li>
-            <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Cutlery</li>
+            <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Plant Pots</Link></li>
+            <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Ceramics</Link></li>
+            <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Tables</Link></li>
+            <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Chairs</Link></li>
+            <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Crockey</Link></li>
+            <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Tableware</Link></li>
+            <li className="text-gray-600 hover:text-gray-800 cursor-pointer"><Link href={"/products"}>Cutlery</Link></li>
             <li className="flex items-center space-x-4 pt-4 border-t border-gray-300">
               <Link href={"/cart"}><FiShoppingCart className="w-6 h-6 text-gray-600 cursor-pointer" /></Link>
               <FiUser className="w-6 h-6 text-gray-600 cursor-pointer" />
