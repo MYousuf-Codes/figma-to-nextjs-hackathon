@@ -13,7 +13,7 @@ ABOUT PAGE:
 CART PAGE:
 [(https://figma-to-nextjs-hackathon.vercel.app/cart)]
 
-This is only a UI of E-commerce webiste, conerted from a Figma design as described for hackathon.
+This is only a UI of E-commerce webiste, converted from a Figma design to Nextjs15 as described for hackathon.
 
 Font Used:
 Clash Display
