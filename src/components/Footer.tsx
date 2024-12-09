@@ -1,12 +1,27 @@
+"use client"
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaPinterest } from "react-icons/fa";
+import { useState } from "react";
 
 function Footer() {
+  const [email, setEmail] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setShowAlert(true);
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 3000); // Hide alert after 3 seconds
+    }
+  };
+
   return (
     <footer className="bg-blue-950 text-white py-8">
       <div className="container mx-auto px-6">
-        {/* Menu Section */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        {/* Desktop Layout: 1 row for all sections */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
           {/* Menu */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Menu</h3>
@@ -45,35 +60,40 @@ function Footer() {
 
           {/* Join Mailing List */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Join our mailing list</h3>
-            <form className="flex flex-wrap">
+            <h3 className="text-xl font-semibold mb-4">Join Our Mailing List</h3>
+            <form onSubmit={handleSubmit} className="w-full">
               <input
                 type="email"
                 placeholder="you@email.com"
-                className="px-4 py-2 text-black w-full sm:w-auto max-w-xs mb-4 sm:mb-0"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-2 mb-4 text-white bg-slate-600 rounded-md"
+                required
               />
               <button
                 type="submit"
-                className="bg-blue-800 text-white px-8 py-2 hover:bg-blue-700 w-full sm:w-auto"
+                className="bg-white text-blue-950 px-6 py-2 hover:bg-blue-800 transition duration-300 rounded-md w-full"
               >
                 Signup
               </button>
             </form>
-          </div>
-        </div>
 
-        {/* Horizontal line */}
-        <div className="my-8 border-t border-gray-600"></div>
 
-        {/* Footer Bottom */}
-        <div className="flex flex-wrap sm:flex-nowrap justify-between items-center">
-          {/* Copyright */}
-          <div className="text-sm text-gray-400 mb-4 sm:mb-0">
-            <p>&copy; 2022 Avion LTD</p>
-          </div>
+    </div>
+        </div >
 
-          {/* Social Icons */}
-          <div className="flex space-x-4">
+    {/* Horizontal line */ }
+    < div className = "my-8 border-t border-gray-600" ></div >
+
+      {/* Footer Bottom */ }
+      < div className = "flex flex-wrap justify-between items-center" >
+        {/* Copyright */ }
+        < div className = "text-sm text-gray-400 mb-4 sm:mb-0" >
+          <p>&copy; 2022 Avion LTD</p>
+          </div >
+
+    {/* Social Icons - Hidden on Mobile */ }
+    < div className = "hidden sm:flex space-x-4" >
             <Link href="https://www.linkedin.com" className="hover:text-gray-300">
               <FaLinkedin size={20} />
             </Link>
@@ -89,10 +109,10 @@ function Footer() {
             <Link href="https://www.pinterest.com" className="hover:text-gray-300">
               <FaPinterest size={20} />
             </Link>
-          </div>
-        </div>
-      </div>
-    </footer>
+          </div >
+        </div >
+      </div >
+    </footer >
   );
 }
 

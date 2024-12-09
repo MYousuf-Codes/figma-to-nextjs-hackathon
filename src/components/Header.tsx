@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi';
 import { HiMenu, HiX } from 'react-icons/hi';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header: React.FC = () => {
       <div className="flex items-center justify-between px-4 py-3 md:px-8 border-b border-gray-300">
         {/* Logo - Left */}
 
-        <div className="text-3xl text-gray-800 md:ml-0 md:order-2 order-1">Avion</div>
+        <div className="text-3xl text-gray-800 md:ml-0 md:order-2 order-1"><Link href={"/"}>Avion</Link></div>
 
         {/* Search Icon and Hamburger - Right on Mobile */}
         <div className="md:order-1 order-2 flex items-center space-x-4">
@@ -31,7 +32,7 @@ const Header: React.FC = () => {
 
         {/* Cart and Profile Icons - Desktop */}
         <div className="hidden md:flex items-center space-x-4 order-3">
-          <FiShoppingCart className="w-6 h-6 text-gray-600 cursor-pointer" />
+        <Link href={"/cart"}><FiShoppingCart className="w-6 h-6 text-gray-600 cursor-pointer" /></Link>
           <FiUser className="w-6 h-6 text-gray-600 cursor-pointer" />
         </div>
       </div>
@@ -71,7 +72,7 @@ const Header: React.FC = () => {
             <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Tableware</li>
             <li className="text-gray-600 hover:text-gray-800 cursor-pointer">Cutlery</li>
             <li className="flex items-center space-x-4 pt-4 border-t border-gray-300">
-              <FiShoppingCart className="w-6 h-6 text-gray-600 cursor-pointer" />
+              <Link href={"/cart"}><FiShoppingCart className="w-6 h-6 text-gray-600 cursor-pointer" /></Link>
               <FiUser className="w-6 h-6 text-gray-600 cursor-pointer" />
             </li>
           </ul>

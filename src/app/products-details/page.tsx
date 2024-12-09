@@ -1,3 +1,6 @@
+import Branding from "@/components/Branding";
+import Collection from "@/components/Collection";
+import NewsLettter from "@/components/NewsLetter";
 import Image from "next/image";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
@@ -14,7 +17,7 @@ const ProductDetails = () => {
         {/* Added pt-20 to avoid overlap with fixed header */}
 
         {/* Left side (Image) on Desktop and Tablet */}
-        <div className="flex justify-center items-center">
+        <div className="flex mt-0 ml-0 justify-center items-center">
           <Image
             src="/productImage.png" // Replace with actual product image path
             alt="Product Image"
@@ -72,19 +75,15 @@ const ProductDetails = () => {
             <div className="flex items-center space-x-2">
               <p className="mr-4 text-sm md:text-lg text-gray-700">Quantity</p>
               <div className="flex items-center space-x-2">
-                <button className="bg-gray-300 text-lg px-4 py-2 rounded-md hover:bg-gray-400 transition duration-200">
-                  <AiOutlineMinus />
-                </button>
-                <span className="px-4 py-2 border-t border-b text-lg text-gray-700">1</span>
-                <button className="bg-gray-300 text-lg px-4 py-2 rounded-md hover:bg-gray-400 transition duration-200">
-                  <AiOutlinePlus />
+                <button className="bg-gray-300 flex items-center justify-center text-black gap-6 px-6 py-3">
+                  <AiOutlineMinus /> 1 <AiOutlinePlus/>
                 </button>
               </div>
             </div>
 
             {/* Add to Cart Button */}
             <div className="mt-4 md:mt-0">
-              <button className="w-full md:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200 border border-blue-600">
+              <button className="w-full md:w-auto px-6 py-3 bg-blue-950 text-white font-semibold  hover:bg-blue-700 transition duration-200 border border-blue-600">
                 Add to Cart
               </button>
             </div>
@@ -167,6 +166,20 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+      
+      <div> 
+      <h1 className="-mb-7 text-4xl ml-12">You Might Also Like</h1>
+      <Collection />
+      </div>
+
+      <div className="pt-10 pb-2">
+        <Branding />
+      </div>
+
+      <div>
+        <NewsLettter useBackgroundImage={false} textColor="text-black"/>
+      </div>
+
     </main>
   );
 };

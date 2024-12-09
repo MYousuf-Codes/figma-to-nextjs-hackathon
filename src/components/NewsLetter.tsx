@@ -3,7 +3,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
 
-function NewsLettter() {
+type NewsletterProps = {
+  useBackgroundImage?: boolean; // Control background image
+  textColor?: string; // Control text color
+};
+
+function NewsLettter({ useBackgroundImage = true, textColor = "text-white" }: NewsletterProps) {
   const [email, setEmail] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
@@ -18,19 +23,27 @@ function NewsLettter() {
   };
 
   return (
-    <main className="relative">
-      {/* Background Image */}
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
-        <Image
-          src={"/newsletter.png"}
-          alt="Email Newsletter Background"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full"
-        />
+    <main className="mt-16 relative">
+      <div
+        className={`relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] ${
+          !useBackgroundImage ? "bg-white" : ""
+        }`}
+      >
+        {/* Conditional Background Image */}
+        {useBackgroundImage && (
+          <Image
+            src={"/newsletter.png"}
+            alt="Email Newsletter Background"
+            layout="fill"
+            objectFit="cover"
+            className="w-full h-full"
+          />
+        )}
 
         {/* Overlay Content */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+        <div
+          className={`absolute inset-0 flex flex-col justify-center items-center text-center px-4 ${textColor}`}
+        >
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
             Join the club and get the benefits
           </h1>
@@ -42,15 +55,15 @@ function NewsLettter() {
           {/* List Items */}
           <ul className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm lg:text-base mb-6">
             <li className="flex items-center">
-              <FaCheckCircle className="text-white mr-2" />
+              <FaCheckCircle className={`mr-2 ${textColor}`} />
               Exclusive offers
             </li>
             <li className="flex items-center">
-              <FaCheckCircle className="text-white mr-2" />
+              <FaCheckCircle className={`mr-2 ${textColor}`} />
               Free events
             </li>
             <li className="flex items-center">
-              <FaCheckCircle className="text-white mr-2" />
+              <FaCheckCircle className={`mr-2 ${textColor}`} />
               Large discounts
             </li>
           </ul>
@@ -58,19 +71,19 @@ function NewsLettter() {
           {/* Email Input and Submit Button */}
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-sm sm:max-w-lg"
+            className="flex flex-col sm:flex-row items-center justify-center w-full max-w-sm sm:max-w-lg"
           >
             <input
               type="email"
               placeholder="you@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full sm:w-auto flex-1 px-4 py-2 text-black bg-white border border-gray-300 rounded-md focus:outline-none"
+              className="w-full sm:w-auto flex-1 px-6 py-4 text-black bg-white border border-gray-300 focus:outline-none"
               required
             />
             <button
               type="submit"
-              className="bg-blue-950 text-white py-2 px-6 sm:px-12 rounded-md hover:bg-blue-800 transition duration-300"
+              className="bg-blue-950 text-white px-6 py-4 sm:px-12  hover:bg-blue-800 transition duration-300"
             >
               Sign up
             </button>

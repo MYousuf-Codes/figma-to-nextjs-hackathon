@@ -15,7 +15,7 @@ function Collection() {
               alt={item.name}
               width={400}
               height={500}
-              className="w-[500px] h-[48] object-cover mb-4"
+              className="w-[500px] h-[48] object-cover mb-4 transition transform hover:scale-110 duration-300 cursor-pointer"
             />
             <h2 className="text-xl font-semibold text-gray-800">{item.name}</h2>
             <p className="text-lg text-gray-600">{item.price}</p>

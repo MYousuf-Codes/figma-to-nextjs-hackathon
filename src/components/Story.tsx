@@ -28,7 +28,7 @@ function Story() {
             alt="story image"
             width={600}
             height={500}
-            className="object-cover w-full h-full rounded-lg"
+            className="object-cover w-full h-full"
           />
         </div>
       </div>

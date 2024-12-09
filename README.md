@@ -4,8 +4,16 @@ HOME PAGE:
 PRODUCTS LISTING PAGE:
 [(https://figma-to-nextjs-hackathon.vercel.app/products)]
 
-PRODUCTS DETAILS PAGE:(pending)
+PRODUCTS DETAILS PAGE:
 [(https://figma-to-nextjs-hackathon.vercel.app/products-details)]
+
+ABOUT PAGE:
+[(https://figma-to-nextjs-hackathon.vercel.app/about)]
+
+CART PAGE:
+[(https://figma-to-nextjs-hackathon.vercel.app/cart)]
+
+This is only a UI of E-commerce webiste, conerted from a Figma design as described for hackathon.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
