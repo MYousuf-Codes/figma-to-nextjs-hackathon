@@ -1,21 +1,8 @@
 "use client"
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaPinterest } from "react-icons/fa";
-import { useState } from "react";
 
 function Footer() {
-  const [email, setEmail] = useState("");
-  const [showAlert, setShowAlert] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setShowAlert(true);
-      setTimeout(() => {
-        setShowAlert(false);
-      }, 3000); // Hide alert after 3 seconds
-    }
-  };
 
   return (
     <footer className="bg-blue-950 text-white py-8">
@@ -61,12 +48,10 @@ function Footer() {
           {/* Join Mailing List */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Join Our Mailing List</h3>
-            <form onSubmit={handleSubmit} className="w-full">
+            <form className="w-full">
               <input
                 type="email"
                 placeholder="you@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-2 mb-4 text-white bg-slate-600 rounded-md"
                 required
               />
@@ -77,23 +62,21 @@ function Footer() {
                 Signup
               </button>
             </form>
-
-
-    </div>
+          </div>
         </div >
 
-    {/* Horizontal line */ }
-    < div className = "my-8 border-t border-gray-600" ></div >
+        {/* Horizontal line */}
+        < div className="my-8 border-t border-gray-600" ></div >
 
-      {/* Footer Bottom */ }
-      < div className = "flex flex-wrap justify-between items-center" >
-        {/* Copyright */ }
-        < div className = "text-sm text-gray-400 mb-4 sm:mb-0" >
-          <p>&copy; 2022 Avion LTD</p>
+        {/* Footer Bottom */}
+        < div className="flex flex-wrap justify-between items-center" >
+          {/* Copyright */}
+          < div className="text-sm text-gray-400 mb-4 sm:mb-0" >
+            <p>&copy; 2022 Avion LTD</p>
           </div >
 
-    {/* Social Icons - Hidden on Mobile */ }
-    < div className = "hidden sm:flex space-x-4" >
+          {/* Social Icons - Hidden on Mobile */}
+          < div className="hidden sm:flex space-x-4" >
             <Link href="https://www.linkedin.com" className="hover:text-gray-300">
               <FaLinkedin size={20} />
             </Link>
